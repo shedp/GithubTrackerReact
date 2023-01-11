@@ -22,7 +22,6 @@ export const getResult = (searchTerm) => {
 			const { data } = await axios.get(
 				`https://api.github.com/users/${searchTerm}/repos`
 			)
-			console.log(data)
 			dispatch(loadResult(data))
 		} catch (err) {
 			console.error(err)
@@ -48,7 +47,6 @@ export const getAvatar = (searchTerm) => {
 			const { data } = await axios.get(
 				`https://api.github.com/users/${searchTerm}`
 			)
-			console.log(data)
 			dispatch(loadAvatar(data.avatar_url))
 		} catch (err) {
 			console.error(err)
