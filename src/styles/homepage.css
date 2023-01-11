@@ -81,3 +81,21 @@
 .repo-item p {
     font-size: 20px;
 }
+
+.results #error {
+    padding-top: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.Placeholder {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.loading {
+    grid-column: 2;
+}
