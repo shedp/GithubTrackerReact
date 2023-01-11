@@ -4,6 +4,9 @@ import SearchForm from '../../components/SearchForm';
 import Result from '../../components/Result';
 import {getResult} from '../../actions';
 import Avatar from "../../components/Avatar"
+import Placeholder from '../../components/Placeholder';
+import PlaceholderAvatar from '../../components/PlaceholderAvatar'
+import ErrorPlaceholder from '../../components/ErrorPlaceholder';
 
 const Search = () => {
     const result = useSelector(state => state.result)
@@ -14,7 +17,7 @@ const Search = () => {
     
     
     const renderResult = () => {
-        return loading ? <p>Loading...</p> : <Result result={result}/>
+        return loading ? <p className='loading'>Loading...</p> : <Result result={result}/>
     }
 
     const renderAvatar = () => {
@@ -22,14 +25,15 @@ const Search = () => {
     }
 
     const search = searchTerm => dispatch(getResult(searchTerm))
-
+    
     return(
         <>
             <SearchForm getResult={search}/>
             {renderAvatar()}
             <div className="background"></div>
             <div className='results'>
-            {error ? <p role="alert"> Oops {error.message}</p> : renderResult()}
+            {!result && !error ? <Placeholder/> :  error ? <ErrorPlaceholder message={error.message}/> : renderResult()}
+           
             </div>
         </>
     )
