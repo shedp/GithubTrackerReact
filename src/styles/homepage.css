@@ -1,32 +1,83 @@
-
+.background {
+    z-index: 0;
+    width: 18rem;
+    min-height: 90.5vh;
+    background-color: #ffffff;
+}
 .results {
+    width:100%;
+    padding: 0px;
+    top: 62px;
+    position: absolute;
     display: grid;
     grid-template-columns: 18rem auto;
-    overflow: scroll;
     min-height: 90.5vh;
+    z-index: 2;
 }
 
 .userResults{
     grid-column: 1;
     background-color: #ffffff;
+    padding: 2rem;
 }
 
-.repo-info{
+.repo-placeholder, .repo-info{
     grid-column: 2;
+    padding: 3rem;
 }
 
 .results a {
     text-decoration: none;
-    color: black;
+    color: #2a2f35;
+}    
+
+.results li {
     cursor: pointer;
+    margin-bottom: 10px;
+    list-style: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.results li:hover {
+    background-color: #d8dee4;
 }
 
 .user-info {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 10px;
 }
 
+.user-info , .repo-number {
+    border-bottom: 1px solid #d8dee4;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+
 .user-info img {
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
+}
+
+.repo-item p {
+    display: inline-block;
+}
+
+.repo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.repos {
+    overflow-y: auto;
+}
+
+.repo-item p {
+    font-size: 20px;
 }
