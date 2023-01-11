@@ -7,10 +7,10 @@ const Avatar = ({result}) => {
     return (
         <div className="mini-avatar">
             {result && 
-                <img src={result[0].owner.avatar_url}/>
+                <a href={result[0].owner.html_url}><img src={result[0].owner.avatar_url}/></a>
             }
         </div>
     )
 }
- 
+
 export default Avatar;
