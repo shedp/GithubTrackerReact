@@ -19,10 +19,16 @@ export const getResult = (searchTerm) => {
 	return async (dispatch) => {
 		dispatch(loading(searchTerm))
 		try {
-			const { data } = await axios.get(
+			const response = await axios.get(
 				`https://api.github.com/users/${searchTerm}/repos`
 			)
-			dispatch(loadResult(data))
+			console.log(response)
+			if (response.data.length != 0) {
+				dispatch(loadResult(response.data))
+			} else {
+				throw new Error('User has no repositories')
+			}
+			
 		} catch (err) {
 			console.error(err)
 			dispatch({
