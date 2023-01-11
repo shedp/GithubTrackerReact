@@ -17,7 +17,7 @@ const Result = ({result}) => {
             <>
                 <div className="userResults">
                     <div className="user-info">
-                        <img src={result[0].owner.avatar_url}/>
+                        <a href={result[0].owner.html_url}><img src={result[0].owner.avatar_url}/></a>
                         <h1>{username}'s Repos</h1>
                     </div>
                     <div className="repo-number"><p>Number of Repositories: {result.length}</p></div>
