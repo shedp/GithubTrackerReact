@@ -6,7 +6,6 @@ const Navbar = () => {
     return ( 
         <header id="navbar">
             <NavLink to='/' span id="logo"><span>Git</span> Tracker</NavLink>
-            <button onClick={() => navigate(-1)}>Back</button>
         </header>
      );
 }

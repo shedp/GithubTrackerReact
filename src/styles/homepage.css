@@ -1,41 +1,24 @@
-label, input[type=submit] {
-    display: none;
-}
-
-form {
-    position: absolute;
-    left: 163px;
-    top: 16px;
-}
-
-#username {
-    height: 24px;
-    width: 170px;
-    padding: 2px 10px;
-    background-color: #24292f;
-    border: 0.5px solid #58606a;
-    border-radius: 6px;
-    color:white
-}
-
-#username::placeholder {
-    color: #c7c8ca;
-}
-
-#username:focus{
-    outline: none;
-    background-color: #4b4f54;
-    color: #24292f;
-}
 
 .results {
-    margin-top: 20px;
-    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 18rem auto;
+    overflow: scroll;
+    min-height: 90.5vh;
+}
+
+.userResults{
+    grid-column: 1;
+    background-color: #ffffff;
+}
+
+.repo-info{
+    grid-column: 2;
 }
 
 .results a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .user-info {

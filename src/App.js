@@ -5,6 +5,7 @@ import {Homepage} from "./pages";
 
 import './styles/styles.css'
 import './styles/navbar.css'
+import './styles/searchform.css'
 import './styles/homepage.css'
 
 const App = () => {

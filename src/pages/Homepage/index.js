@@ -20,12 +20,10 @@ const Search = () => {
 
     return(
         <>
-            <div id="search">
-                <SearchForm getResult={search}/>
-                
-                {error ? <p role="alert"> Oops {error}</p> : renderResult()}
+            <SearchForm getResult={search}/>
+            <div className='results'>
+            {error ? <p role="alert"> Oops {error}</p> : renderResult()}
             </div>
-            
         </>
     )
 };
