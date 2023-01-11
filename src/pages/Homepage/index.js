@@ -29,7 +29,7 @@ const Search = () => {
             {renderAvatar()}
             <div className="background"></div>
             <div className='results'>
-            {error ? <p role="alert"> Oops {error}</p> : renderResult()}
+            {error ? <p role="alert"> Oops {error.message}</p> : renderResult()}
             </div>
         </>
     )
