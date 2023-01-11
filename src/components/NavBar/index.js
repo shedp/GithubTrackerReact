@@ -5,7 +5,7 @@ const Navbar = () => {
     const navigate = useNavigate()
     return ( 
         <header id="navbar">
-            <NavLink to='/' span id="logo"><span>Git</span> Tracker</NavLink>
+            <NavLink to='/' id="logo"><span>Git</span> Tracker</NavLink>
         </header>
      );
 }
