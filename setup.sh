@@ -1,6 +1,7 @@
 npm init -y
 npm i -D webpack
 npm i -D webpack-cli
+npm install -D webpack-dev-server
 npm i -D html-webpack-plugin
 npm i -D dev-server
 npm i -D webpack
