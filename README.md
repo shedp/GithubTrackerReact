@@ -12,7 +12,7 @@ Open terminal and run npm install to install dependencies.
 
 Select index.html in client folder and open with Live Server.
 
-#Change Log
+# Change Log
 
 Created folders and files structure for project
 Created Welcome and Repo pages with functioning Navbar
@@ -24,12 +24,12 @@ Worked on Github inspired styling
 Created and added favicon
 Added placeholders
 
-#Technologies
+# Technologies
 
 DATA: Github API
 react.js, Readux, Webpack, Redux-Thunk, AXIOS, vanilla css, dayjs
 
-#Wins & Challanges
+# Wins & Challanges
 
 Wins
 Successfully aquiring data from API
