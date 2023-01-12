@@ -29,7 +29,7 @@ const Search = () => {
     return(
         <>
             <SearchForm getResult={search}/>
-            {renderAvatar()}
+            {!result && !error ? <PlaceholderAvatar/> :  error ? <PlaceholderAvatar/> : renderAvatar()}
             <div className="background"></div>
             <div className='results'>
             {!result && !error ? <Placeholder/> :  error ? <ErrorPlaceholder message={error.message}/> : renderResult()}

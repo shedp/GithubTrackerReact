@@ -4,7 +4,7 @@ import React from "react";
 const PlaceholderAvatar = () => {
     return ( 
         <div className="mini-avatar placeholder">
-            <img src="lightlogo.png" width="18px" height="18px"/>
+            <img src="./images/lightlogo.png" width="18px" height="18px"/>
         </div>
      );
 }
