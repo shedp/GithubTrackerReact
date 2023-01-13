@@ -9,7 +9,7 @@ import PlaceholderAvatar from '../../components/PlaceholderAvatar'
 import ErrorPlaceholder from '../../components/ErrorPlaceholder';
 
 const Search = () => {
-    const result = useSelector(state => state.result)
+    const result = useSelector(state => state.profile)
     const loading = useSelector(state => state.loading)
     const error = useSelector(state => state.error)
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const Search = () => {
     
     return(
         <>
-            <SearchForm getResult={search}/>
+            <SearchForm getResult={search} />
             {!result && !error ? <PlaceholderAvatar/> :  error ? <PlaceholderAvatar/> : renderAvatar()}
             <div className="background"></div>
             <div className='results'>
