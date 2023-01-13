@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 
 const Repo = ({id}) => {
     const repo = useSelector(state => state.repos.find(r => r.id == id ))
-    
+
     return ( 
         <div className="repo-info">
             {repo && <div>
