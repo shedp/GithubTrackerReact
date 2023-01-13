@@ -4,11 +4,11 @@ Creating a Github repo tracker using the Github API and React.js
 
 # Installation & Usage
 
-Git clone/download repository.
+`Git clone`/download repository.
 
-Navigate to server folder.
+Navigate to folder.
 
-Open terminal and run npm install to install dependencies.
+Open terminal and run `npm install` to install dependencies.
 
 `npm run dev`
 
