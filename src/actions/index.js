@@ -8,10 +8,17 @@ export const loading = (username) => {
     }
 }
 
-export const loadResult = (result) => {
+export const loadProfile = (profile) => {
+	return {
+		type: "LOAD_PROFILE",
+		payload: profile
+	}
+}
+
+export const loadRepos = (repos) => {
     return {
-        type: "LOAD_RESULT",
-        payload: result
+        type: "LOAD_REPOS",
+        payload: repos
     }
 }
 
@@ -20,40 +27,16 @@ export const getResult = (searchTerm) => {
 		dispatch(loading(searchTerm))
 		try {
 			const response = await axios.get(
-				`https://api.github.com/users/${searchTerm}/repos`
-			)
-			console.log(response)
-			if (response.data.length != 0) {
-				dispatch(loadResult(response.data))
-			} else {
-				throw new Error('User has no repositories')
-			}
-			
-		} catch (err) {
-			console.error(err)
-			dispatch({
-                type: "SET_ERROR",
-                payload: err
-            })
-		}
-	}
-}
-
-export const loadAvatar = (result) => {
-    return {
-        type: "LOAD_AVATAR",
-        payload: result
-    }
-}
-
-export const getAvatar = (searchTerm) => {
-	return async (dispatch) => {
-		dispatch(loading(searchTerm))
-		try {
-			const { data } = await axios.get(
 				`https://api.github.com/users/${searchTerm}`
 			)
-			dispatch(loadAvatar(data.avatar_url))
+			dispatch(loadProfile(response.data))
+			if (response.data.public_repos != 0) {
+				const response = await axios.get(
+					`https://api.github.com/users/${searchTerm}/repos`
+				)
+				dispatch(loadRepos(response.data))
+			}
+			
 		} catch (err) {
 			console.error(err)
 			dispatch({
