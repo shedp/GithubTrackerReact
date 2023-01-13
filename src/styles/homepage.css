@@ -1,6 +1,6 @@
 .background {
     z-index: 0;
-    width: 18rem;
+    width: 25rem;
     min-height: 90.5vh;
     background-color: #ffffff;
 }
@@ -10,7 +10,7 @@
     top: 62px;
     position: absolute;
     display: grid;
-    grid-template-columns: 18rem auto;
+    grid-template-columns: 25rem auto;
     min-height: 90.5vh;
     z-index: 2;
 }
@@ -19,9 +19,11 @@
     grid-column: 1;
     background-color: #ffffff;
     padding: 2rem;
+    overflow: wrap;
 }
 
 .repo-placeholder, .repo-info{
+    width:100%;
     grid-column: 2;
     padding: 3rem;
 }
