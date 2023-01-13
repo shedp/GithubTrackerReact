@@ -10,7 +10,7 @@ Navigate to server folder.
 
 Open terminal and run npm install to install dependencies.
 
-Select index.html in client folder and open with Live Server.
+`npm run dev`
 
 # Change Log
 
