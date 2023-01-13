@@ -1,6 +1,7 @@
 const initState = {
     username: "",
-    result: "",
+    profile: "",
+    repos: [],
     loading: false
 };
 
@@ -12,20 +13,21 @@ const searchReducer = (state=initState, action) => {
                     username: action.payload,
                     loading: true
                 };
-            case "LOAD_RESULT":
+            case "LOAD_PROFILE":
                 return {
                     ...state,
-                    result: action.payload,
+                    profile: action.payload,
+                    repos: [],
                     loading: false,
                     error: false
                 };
-            case "LOAD_AVATAR":
+            case "LOAD_REPOS":
                 return {
                     ...state,
-                    result: action.payload,
+                    repos: action.payload,
                     loading: false,
-                    error: false
-                };
+                    error: false,
+                }
             case "SET_ERROR":
                 return {
                     ...state,
